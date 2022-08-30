@@ -5,7 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexos</title>
-    <style></style>
+    <style>
+        @media(max-width:391px){
+            header{
+                display: grid; 
+                grid-template-areas:
+                "logo logo"
+                "menu loginButton";
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            li{
+                list-style: none;
+            }
+            #menu{
+             grid-area: menu;
+            }
+            #loginButton{
+                grid-area: loginButton;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+        }
+    </style>
 </head>
     <body>
         <header>
