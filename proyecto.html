@@ -6,30 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexos</title>
     <style>
+        html,body{
+            margin:0px;
+        }
         @media(max-width:391px){
             header{
                 display: grid; 
-                grid-template-areas:
-                "logo logo"
-                "menu loginButton";
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
             }
-            ul{
+            #logo{
                 display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                grid-column: 1/5;               
+            }
+            #logo > img{
+                height: 75%;
             }
             li{
                 list-style: none;
             }
             #menu{
-             grid-area: menu;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                grid-column: 1/4;           
+                padding: 10px;
+            }
+            #menu > a{
+                text-decoration: none;
+                color: black;
             }
             #loginButton{
-                grid-area: loginButton;
-                align-items: center;
-                justify-content: center;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: 4/5;    
             }
         }
     </style>
@@ -40,14 +53,12 @@
                 <img src="./Materiales/logo.png">
             </div>
             <nav id="menu">
-                <ul>
-                    <li>Nosotros</li>
-                    <li>Noticias</li>
-                    <li>Ayuda</li>
-                </ul>
+                <a href = "#"">Nosotros</a>
+                <a href = "#"">Noticias</a>
+                <a href = "#"">Ayuda</a>
             </nav>
             <div id="loginButton">
-                <button >Ingresar</button>
+                <button>Ingresar</button>
             </div>
         </header>
         <main>
