@@ -103,6 +103,27 @@
                 color: white;
                 text-shadow: 1px 1px 1px gray; 
             }
+            #opportunitiesText{
+                text-align: center;
+            }
+            #opportunitiesText > p{
+                padding: 5px;
+                font-size: small;
+                text-align: center;
+                margin-right: 20%;
+                margin-left: 20%;
+            }
+            #boxes{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+            #redOp{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                background-color: #dc3545;
+            }
+            
         }
     </style>
 </head>
@@ -155,10 +176,10 @@
                 <img src="./Materiales/voluntariado.jpg">
             </div>
         </section>
-        <section id="oportunities">
-            <div id="oportunitiesText">
-                <h6>Encuentra las mejores oportunidades</h6>
-                <p>La plataforma cuenta con gran variedad de proyectos locales(sociales, educativos y medioambientales), donde
+        <section id="opportunities">
+            <div id="opportunitiesText">
+                <h4>Encuentra las mejores oportunidades</h4>
+                <p>La plataforma cuenta con gran variedad de proyectos locales (sociales, educativos y medioambientales), donde
                     encontraras el que mejor se adapte a la experiencia que estas buscando
                     Te ayudamos en la coordinacion con la organización de forma simple y rápida.
                 </p>
