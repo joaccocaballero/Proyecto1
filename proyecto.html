@@ -11,7 +11,7 @@
             margin:0px;
             font-family: 'DM Sans'
         }
-        @media(max-width:391px){
+        @media(min-width:389px) and (max-width:845px){
             header{
                 display: grid; 
                 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -37,7 +37,8 @@
                 color: black;
             }
             #loginButton{
-                grid-column: 4/5;    
+                grid-column: 4/5;
+                margin-right: 4%;
             }
             #loginButton > button{
                 border-radius: 10px;
@@ -54,8 +55,6 @@
                 align-items: center;
             }
             main{
-                flex-direction: column;
-                padding: 20%;
                 background: 
                 linear-gradient(
                     rgba(0, 0, 0, 0.166), 
@@ -63,20 +62,24 @@
                     rgba(0, 0, 0, 0.606)
                 ),
                 url("./Materiales/manos.jpg");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                text-align: center;
-                color: white;
-                text-shadow: 1px 1px 1px gray;             
+                text-align: center;           
             }
-            
+            #mainText{
+                margin: 80px;
+            } 
             #office, #volunteer{
                 display: none;
             }
-            #textOffice{
+            .backgroundImage{
                 flex-direction: column;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: white;
+                text-shadow: 1px 1px 1px gray;
                 padding: 5%;
+            }
+            #textOffice{
                 background: 
                 linear-gradient(
                     rgba(0, 0, 0, 0.606), 
@@ -84,16 +87,9 @@
                     rgba(0, 0, 0, 0.606)
                 ),
                 url("./Materiales/oficina.png");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                text-align: left;
-                color: white;
-                text-shadow: 1px 1px 1px gray;
+                text-align: left;               
             }
             #textVolunteer{
-                flex-direction: column;
-                padding: 5%;
                 background: 
                 linear-gradient(
                     rgba(0, 0, 0, 0.606), 
@@ -105,8 +101,6 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 text-align: right;
-                color: white;
-                text-shadow: 1px 1px 1px gray; 
             }
             #opportunitiesText{
                 text-align: center;
@@ -119,16 +113,61 @@
                 margin-left: 20%;
             }
             #boxes{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .opBoxes{
+                border-radius: 10%;
+                width: 40%;
+                color:white;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas:
+                "img icn"
+                "texto texto";
+                margin: 15px;
+                max-width: 160px;
+                min-height: 145px;
+            }
+            .imgBoxes{
+                grid-area: img;
+                max-width: 50px;
+                max-height: 70px;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+            .icnBoxes{
+                grid-area: icn;
+                max-width: 30px;
+                max-height: 30px;
+                margin-left: 2%;
+                margin-right: 10px;
+                margin-left: 40%;
+                margin-top: 15px;
+            }
+            .txtBoxes{
+                grid-area: texto;
+                display: flex;    
+                justify-content: center;
+                align-items: center;
+                font-size: large;
+                text-align: center;
             }
             #redOp{
-                grid-column: 2/3;
-                grid-row: 1/2;
                 background-color: #dc3545;
+            } 
+            #yellowOp{
+                background-color: #FF9C07;
             }
-            
+            #greenOp{
+                background-color: #28a745;
+            }
+            #blueBox{
+                background-color: #17a2b8;
+             
+            }
+                  
         }
     </style>
 </head>
@@ -146,7 +185,7 @@
                 <button> <b>INGRESAR</b></button>
             </div>
         </header>
-        <main >
+        <main class="backgroundImage">
             <div id="mainText">
                 <h2>¡Actúa para cambiar el mundo!</h2>
                 <p>Fomentamos el vínculo entre empresas y organizaciones civiles para generar un
@@ -159,7 +198,7 @@
             <div id="office">
                 <img src="./Materiales/oficina.png">
             </div>
-            <div id ="textOffice">
+            <div id ="textOffice" class="backgroundImage">
                 <h3>Soluciones para empresas</h3>
                 <p>Generamos un medio para que las empresas se involucren
                     en actividades de responsabilidad social.
@@ -167,7 +206,7 @@
                     parte del cambio!
                 </p>
             </div>
-            <div id="textVolunteer">
+            <div id="textVolunteer" class="backgroundImage">
                 <h3>Soluciones para organizaciones</h3>
                 <p>
                     Apoyamos a las organizaciones sociales para que alcancen
@@ -189,26 +228,26 @@
                     Te ayudamos en la coordinacion con la organización de forma simple y rápida.
                 </p>
             </div>
-            <div class="boxes">
-                <div id="redOp">
-                    <img src="./Materiales/icono-mano.png">
-                    <img src="./Materiales/icono-mas.png">
-                    <p>Ser voluntario</p>
+            <div id="boxes">
+                <div id="redOp" class="opBoxes">
+                    <img class="imgBoxes" src="./Materiales/icono-mano.png">
+                    <img class="icnBoxes" src="./Materiales/icono-mas.png">
+                    <p class="txtBoxes">Ser voluntario</p>
                 </div>
-                <div id="yellowOp">
-                    <img src="./Materiales/icono-mano-corazon.png">
-                    <img src="./Materiales/icono-mas.png">
-                    <p>Donar</p>
+                <div id="yellowOp" class="opBoxes">
+                    <img class="imgBoxes" src="./Materiales/icono-mano-corazon.png">
+                    <img class="icnBoxes" src="./Materiales/icono-mas.png">
+                    <p class="txtBoxes">Donar</p>
                 </div>
-                <div id="greenOp">
-                    <img src="./Materiales/icono-reciclar.png">
-                    <img src="./Materiales/icono-mas.png">
-                    <p>Reciclar</p>
+                <div id="greenOp" class="opBoxes">
+                    <img class="imgBoxes" src="./Materiales/icono-reciclar.png">
+                    <img class="icnBoxes" src="./Materiales/icono-mas.png">
+                    <p class="txtBoxes">Reciclar</p>
                 </div>
-                <div id="blueBox">
-                    <img src="./Materiales/icono-maletin.png">
-                    <img src="./Materiales/icono-mas.png">
-                    <p>Llamados laborales</p>
+                <div id="blueBox" class="opBoxes">
+                    <img class="imgBoxes" src="./Materiales/icono-maletin.png">
+                    <img class="icnBoxes" src="./Materiales/icono-mas.png">
+                    <p class="txtBoxes">Llamados laborales</p>
                 </div>
             </div>
         </section>
