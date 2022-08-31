@@ -27,7 +27,6 @@
                 justify-content: space-evenly;
                 grid-column: 1/4;           
                 padding: 10px;
-                font-family: 'DM Sans';
             }
             #menu > a{
                 text-decoration: none;
@@ -52,8 +51,59 @@
             }
             main{
                 flex-direction: column;
-                background-image: url("./Materiales/manos.jpg");
+                padding: 20%;
+                background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.166), 
+                    rgba(0, 0, 0, 0.411),
+                    rgba(0, 0, 0, 0.606)
+                ),
+                url("./Materiales/manos.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: center;
+                color: white;
+                text-shadow: 1px 1px 1px gray;             
             }
+            #office, #volunteer{
+                display: none;
+            }
+            #textOffice{
+                flex-direction: column;
+                padding: 5%;
+                background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.606), 
+                    rgba(0, 0, 0, 0.606),
+                    rgba(0, 0, 0, 0.606)
+                ),
+                url("./Materiales/oficina.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: left;
+                color: white;
+                text-shadow: 1px 1px 1px gray;   
+            }
+            #textVolunteer{
+                flex-direction: column;
+                padding: 5%;
+                background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.606), 
+                    rgba(0, 0, 0, 0.606),
+                    rgba(0, 0, 0, 0.606)
+                ),
+                url("./Materiales/voluntariado.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: right;
+                color: white;
+                text-shadow: 1px 1px 1px gray; 
+            }
+        }
     </style>
 </head>
     <body>
@@ -70,9 +120,9 @@
                 <button> <b>INGRESAR</b></button>
             </div>
         </header>
-        <main class="alignHeader">
-            <div class="alignHeader" id="mainText">
-                <h3>¡Actúa para cambiar el mundo!</h3>
+        <main >
+            <div id="mainText">
+                <h2>¡Actúa para cambiar el mundo!</h2>
                 <p>Fomentamos el vínculo entre empresas y organizaciones civiles para generar un
                     impacto positivo en la sociedad.
                     Descubrí diferentes maneras de involucrar tu organización con la sociedad.
@@ -84,7 +134,7 @@
                 <img src="./Materiales/oficina.png">
             </div>
             <div id ="textOffice">
-                <h5>Soluciones para empresas</h5>
+                <h3>Soluciones para empresas</h3>
                 <p>Generamos un medio para que las empresas se involucren
                     en actividades de responsabilidad social.
                     ¡Crea un grupo de voluntarios en tu organización y se
@@ -92,7 +142,7 @@
                 </p>
             </div>
             <div id="textVolunteer">
-                <h5>Soluciones para organizaciones</h5>
+                <h3>Soluciones para organizaciones</h3>
                 <p>
                     Apoyamos a las organizaciones sociales para que alcancen
                     sus objetivos. Ponemos a su disposición una comunidad de voluntarios
