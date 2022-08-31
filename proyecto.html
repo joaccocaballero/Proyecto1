@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
     <title>Nexos</title>
     <style>
         html,body{
             margin:0px;
+            font-family: 'DM Sans'
         }
         @media(max-width:391px){
             header{
@@ -16,53 +18,60 @@
                 grid-template-rows: 1fr 1fr;
             }
             #logo{
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 grid-column: 1/5;               
             }
             #logo > img{
                 height: 75%;
             }
-            li{
-                list-style: none;
-            }
             #menu{
-                display: flex;
                 justify-content: space-evenly;
-                align-items: center;
                 grid-column: 1/4;           
                 padding: 10px;
+                font-family: 'DM Sans';
             }
             #menu > a{
                 text-decoration: none;
                 color: black;
             }
             #loginButton{
+                grid-column: 4/5;    
+            }
+            #loginButton > button{
+                border-radius: 10px;
+                padding: 5px;
+                width: 80%;
+                background-color: #5227CC;
+                font-family: 'DM Sans';
+                color: white;
+                border: none;
+            }
+            .alignHeader{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                grid-column: 4/5;    
             }
-        }
+            main{
+                flex-direction: column;
+                background-image: url("./Materiales/manos.jpg");
+            }
     </style>
 </head>
     <body>
         <header>
-            <div id = "logo">
+            <div class="alignHeader" id ="logo">
                 <img src="./Materiales/logo.png">
             </div>
-            <nav id="menu">
+            <nav class="alignHeader" id="menu">
                 <a href = "#"">Nosotros</a>
                 <a href = "#"">Noticias</a>
                 <a href = "#"">Ayuda</a>
             </nav>
-            <div id="loginButton">
-                <button>Ingresar</button>
+            <div class="alignHeader" id="loginButton">
+                <button> <b>INGRESAR</b></button>
             </div>
         </header>
-        <main>
-            <div id="mainText">
+        <main class="alignHeader">
+            <div class="alignHeader" id="mainText">
                 <h3>¡Actúa para cambiar el mundo!</h3>
                 <p>Fomentamos el vínculo entre empresas y organizaciones civiles para generar un
                     impacto positivo en la sociedad.
