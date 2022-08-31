@@ -166,6 +166,45 @@
                 background-color: #17a2b8;
              
             }
+            #news{
+                background-color: #5298ff;
+            }
+            #newsText{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 10%;
+            }
+        #newsText > h2, p{
+            margin: 0px;
+        }
+        .card{
+            background-color: white;
+            margin-left: 20%;
+            margin-right: 20%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 5%;
+            display: grid;
+            grid-template-areas: 
+            "imgcard"
+            "datecard"
+            "textcard"
+            "footercard";
+        }
+        .imgcard{
+            grid-area: imgcard;
+            height: 50%;
+        }
+        #animalscard{
+            background-image: url("./Materiales/cardanimales.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        
                   
         }
     </style>
@@ -252,36 +291,34 @@
         </section>
         <section id="news">
             <div id="newsText">
-                <h6> Noticias </h6>
+                <h2> Noticias </h2>
                 <p><u> ver todas </u></p>
             </div>
             <div id="newscontent">
                 
             <div class="card">
-                <div>
-                    <img src="">
+                <div class="imgcard" id="animalscard">
                     <p class="imgtag">ANIMALES</p>
                 </div>
-                <div>
+                <div class="datecard">
                     <img src="./Materiales/icono-calendario.png">
                     <p>10/08/2021</p>
                     <img src="./Materiales/icono-reloj.png">
                     <p> 4 min </p>
                 </div>
-                <div>
+                <div class="textcard">
                     <p><b>Fundappas abre nuevo centro</b></p>
                     <p> El nuevo centro estará ubicado dentro
                         del predio municipal Parque Rivera.
                         La inauguración de centro contara
                         con la presencia de la intendenta Carolina...</p>
                 </div>
-                <div>
+                <div class="footercard">
                     <img src="./Materiales/icono-flecha.png">
                     <p>ver más</p>
+                </div>
             </div>
-
             <div class="card">
-                <div class="card">
                     <div>
                         <img src="">
                         <p class="imgtag">URUGUAY</p>
@@ -303,7 +340,7 @@
                     <div>
                         <img src="./Materiales/icono-flecha.png">
                         <p>ver más</p>
-                </div>
+                     </div>
             </div>
 
             <div class="card">
