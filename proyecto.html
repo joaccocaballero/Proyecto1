@@ -8,10 +8,115 @@
     <title>Nexos</title>
     <style>
         html,body{
+            height: 100%;
+            width: 100%;
             margin:0px;
             font-family: 'DM Sans'
         }
-        @media(min-width:389px) and (max-width:845px){
+       .alignHeader{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .buttonstyle{
+            border-radius: 10px;
+            padding: 5px;
+            width: 25%;
+            background-color: #5227CC;
+            font-family: 'DM Sans';
+            font-size: larger;
+            color: white;
+            border: none;
+        }
+        .backgroundImage{
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-shadow: 1px 1px 1px gray;
+            padding: 5%;
+        }
+        .textSolutions{
+            text-align: left;
+            font-size: x-large;
+            display: flex;
+            justify-content: center; 
+        }
+        header{
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            border-bottom: 5px solid #5227cc;
+            padding: 1%;
+        }
+        #logo{
+            grid-column: 1/2;
+            border-top: 50px;
+            justify-content: flex-start;
+            flex-direction: row;                  
+        }
+        #logo > img{
+            height: 80%;
+            margin-left: 50px;
+        }
+        #menu{
+            justify-content: space-evenly;
+            grid-column: 2/4;           
+            padding: 5px;
+            justify-content: flex-start;
+            gap:25px;
+        }
+        #menu > a{
+            text-decoration: none;
+            color: black;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #loginButton{
+            grid-column: 4/5;
+            justify-content: flex-end;
+            margin-right: 4%;
+        }
+        main{
+            background: 
+            linear-gradient(
+                    rgba(0, 0, 0, 0.166), 
+                    rgba(0, 0, 0, 0.411),
+                    rgba(0, 0, 0, 0.606)
+            ),
+            url("./Materiales/manos.jpg");
+            text-align: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;           
+        }
+        #mainText{
+            margin-left:20%;
+            margin-right:20%;
+            padding:2%;
+            font-size: x-large;
+        } 
+        #solutions{
+            display: grid;
+            grid-template-areas: 
+            "office textOffice"
+            "textVolunteer volunteer";
+            background-color: #5298ff;
+            padding:5%;
+            height: 900px;
+        }
+        #office{
+            background: url("./Materiales/oficina.png");
+            background-size: cover;
+            background-position:top;
+        }
+        #volunteer{
+            background: url("./Materiales/voluntariado.jpg");
+            background-size: cover;
+            background-position:top;
+        }   
+        @media(min-width:390px) and (max-width:844px){
             header{
                 display: grid; 
                 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -355,7 +460,7 @@
         </header>
         <main class="backgroundImage">
             <div id="mainText">
-                <h2>¡Actúa para cambiar el mundo!</h2>
+                <h1>¡Actúa para cambiar el mundo!</h1>
                 <p>Fomentamos el vínculo entre empresas y organizaciones civiles para generar un
                     impacto positivo en la sociedad.
                     Descubrí diferentes maneras de involucrar tu organización con la sociedad.
@@ -364,9 +469,9 @@
         </main>
         <section id="solutions">
             <div id="office">
-                <img src="./Materiales/oficina.png">
+                
             </div>
-            <div id ="textOffice" class="backgroundImage">
+            <div id ="textOffice" class="backgroundImage textSolutions">
                 <h3>Soluciones para empresas</h3>
                 <p>Generamos un medio para que las empresas se involucren
                     en actividades de responsabilidad social.
@@ -374,7 +479,7 @@
                     parte del cambio!
                 </p>
             </div>
-            <div id="textVolunteer" class="backgroundImage">
+            <div id="textVolunteer" class="backgroundImage textSolutions">
                 <h3>Soluciones para organizaciones</h3>
                 <p>
                     Apoyamos a las organizaciones sociales para que alcancen
@@ -385,7 +490,6 @@
                 </p>
             </div>
             <div id="volunteer">
-                <img src="./Materiales/voluntariado.jpg">
             </div>
         </section>
         <section id="opportunities">
@@ -536,9 +640,9 @@
             </div>
         </section>
         <section id ="contactUs">
-            <div id="laptop" class="alignHeader">
+           <!--<div id="laptop" class="alignHeader">
                 <img src="./Materiales/laptop-escritorio.jpg">
-            </div>
+            </div>-->
             <div>
                 <h2><b>Contacto</b></h2>
                 <form id="contactForm">
