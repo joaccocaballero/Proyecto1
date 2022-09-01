@@ -40,7 +40,7 @@
                 grid-column: 4/5;
                 margin-right: 4%;
             }
-            #loginButton > button{
+            .buttonstyle{
                 border-radius: 10px;
                 padding: 5px;
                 width: 80%;
@@ -168,6 +168,7 @@
             }
             #news{
                 background-color: #5298ff;
+                padding: 10%;
             }
             #newsText{
                 display: flex;
@@ -205,7 +206,7 @@
             border-radius: 10px;
             background-color: #5227CC;
             color:white;
-            width:100px;
+            width:120px;
             padding:5px;
             height: 20px;
             text-align: center;
@@ -232,20 +233,50 @@
         }
         .textcard{
             grid-area: textcard;
+            padding: 15px;
         }
         .footercard{
             grid-area: footercard;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+            padding: 15px;
+            gap: 10px;
         }
         #animals{
             background-image: url("./Materiales/cardanimales.jpg");
             background-size: cover;
             background-position: center;
         }
-
-
-        
-                  
+        #uruguay{
+            background-image: url("./Materiales/casamadera.jpg");
+            background-size: cover;
+            background-position: center;
         }
+        #voluntariado{
+            background-image: url("./Materiales/volunteercard.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        #uruguay2{
+            background-image: url("./Materiales/techoCard.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        #laptop > img {
+            max-width: 50%;
+            margin-top: 20px;
+        }
+        #contactUs {
+            padding: 5%;
+        }
+        #contactimput{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        }      
     </style>
 </head>
     <body>
@@ -259,7 +290,7 @@
                 <a href = "#"">Ayuda</a>
             </nav>
             <div class="alignHeader" id="loginButton">
-                <button> <b>INGRESAR</b></button>
+                <button class="buttonstyle"> <b>INGRESAR</b></button>
             </div>
         </header>
         <main class="backgroundImage">
@@ -349,7 +380,7 @@
                         </div>                 
                     </div>
                     <div class="textcard">
-                        <p><b>Fundappas abre nuevo centro</b></p>
+                        <h3>Fundappas abre nuevo centro</h3>
                         <p> El nuevo centro estará ubicado dentro
                             del predio municipal Parque Rivera.
                             La inauguración de centro contara
@@ -362,90 +393,96 @@
                 </div>
 
                 <div class="card">
-                        <div>
-                            <img src="">
+                        <div class="imgcard" id="uruguay">
                             <p class="imgtag">URUGUAY</p>
                         </div>
-                        <div>
-                            <div>
+                        <div class="datecard">
+                            <div class="calendar">
                                 <img src="./Materiales/icono-calendario.png">
                                 <p>10/08/2021</p>
                             </div>
-                            <div>
+                            <div class="time">
                                 <img src="./Materiales/icono-reloj.png">
                                 <p> 4 min </p>
                             </div>         
                         </div>
-                        <div>
-                            <p><b>DIRECT TV y TECHO inauguraron un
-                                espacio deportivo</b></p>
+                        <div class="textcard">
+                            <h3>DIRECT TV y TECHO inauguraron un
+                                espacio deportivo</h3>
                             <p> Los vecinos del lugar recibieron con
                                 alegría la concreción de este proyecto, 
                                 que busca promover la socialización y la
                                 actividad física...</p>
                         </div>
-                        <div>
+                        <div class="footercard">
                             <img src="./Materiales/icono-flecha.png">
                             <p>ver más</p>
                         </div>
                 </div>
 
                 <div class="card">
-                    <div>
-                        <img src="">
+                    <div class="imgcard" id="voluntariado">
                         <p class="imgtag">VOLUNTARIADO</p>
                     </div>
-                    <div>
-                        <img src="./Materiales/icono-calendario.png">
-                        <p>10/08/2021</p>
-                        <img src="./Materiales/icono-reloj.png">
-                        <p> 3 min </p>
+                    <div class="datecard">
+                        <div class="calendar">
+                            <img src="./Materiales/icono-calendario.png">
+                            <p>10/08/2021</p>
+                        </div>
+                        <div class="time">
+                            <img src="./Materiales/icono-reloj.png">
+                            <p> 3 min </p>
+                        </div>
                     </div>
-                    <div>
-                        <p><b>Jornada de voluntarios</b></p>
+                    <div class="textcard">
+                       <h3>Jornada de voluntarios</h3>
                         <p> Se realizó una nueva jornada de voluntarios
                             Remar. El encuentro tuvo parte en el departamento
                             de Montevideo y contó..
                         </p>
                     </div>
-                    <div>
+                    <div class="footercard">
                         <img src="./Materiales/icono-flecha.png">
                         <p>ver más</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div>
-                        <img src="">
+                    <div class="imgcard" id="uruguay2">
                         <p class="imgtag">URUGUAY</p>
                     </div>
-                    <div>
-                        <img src="./Materiales/icono-calendario.png">
-                        <p>10/08/2021</p>
-                        <img src="./Materiales/icono-reloj.png">
-                        <p> 5 min </p>
+                    <div class="datecard">
+                        <div class="calendar">
+                            <img src="./Materiales/icono-calendario.png">
+                            <p>10/08/2021</p>
+                        </div>
+                        <div class="time">
+                            <img src="./Materiales/icono-reloj.png">
+                            <p> 5 min </p>        
+                        </div>
                     </div>
-                    <div>
-                        <p><b>Lanzamiento del plan Tu Techo</b></p>
+                    <div class="textcard">
+                        <h3>Lanzamiento del plan Tu Techo</h3>
                         <p> Techo Uruguay informó su nuevo plan
                             de acción para el segundo semestre del
                             año.
                         </p>
                     </div>
-                    <div>
+                    <div class="footercard">
                         <img src="./Materiales/icono-flecha.png">
                         <p>ver más</p>
                     </div>
+                </div>
             </div>
         </section>
         <section id ="contactUs">
-            <div>
+            <div id="laptop" class="alignHeader">
                 <img src="./Materiales/laptop-escritorio.jpg">
             </div>
             <div>
                 <h2><b>Contacto</b></h2>
                 <form>
-                    <div>
+                    <div id="contactimput">
                         <label>Texto Dato</label>
                         <input type="text" placeholder="Dato a completar">
                         <label>Texto Dato</label>
@@ -453,7 +490,7 @@
                         <label>Mensaje</label>
                         <input type="text" placeholder="Dato a completar">
                     </div>
-                    <button>Enviar</button>
+                    <button class="buttonstyle">Enviar</button>
                 </form>
             </div>
         </section>
