@@ -264,41 +264,72 @@
             background-position: center;
         }
         #laptop > img {
-            max-width: 50%;
+            max-width: 70%;
             margin-top: 20px;
         }
         #contactUs {
             padding: 5%;
+            margin-bottom: 10px;
         }
         #contactimput{
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
+        #contactimput > input{
+            font-family:'DM Sans';
+            border-radius: 5px;
+        }
+        #messageinput{
+        height: 100px;
+        }
+        #messageinput::placeholder{
+        position: fixed;
+        }
+
+        #contactform > button{
+            max-width: 30%;
+            margin-top: 20px;
+            margin-left: 70%;
+        }
         footer{
             display: grid;
+            gap: 15px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            border-bottom: 5px solid #5227cc;
+            grid-template-rows: 1fr 1fr 1fr;
+            border-bottom: 5px solid white;
+            background-color: #5227cc;
+        }
+        footer > p{
+            grid-row: 3/4;
+            color: white;
+            grid-column: 1/5;
+            justify-content: center;
+            display: flex;
+            font-size: x-small;
         }
         #logo2{
             grid-column: 1/5;
             border-top: 50px;
-            justify-content: flex-end;
+            justify-content: center;
             flex-direction: column;
+            margin-top: 20px;
         }
         #logo2 > img{
-            height: 70%;
+            height: 100%;
         }
         #lists{
-            justify-content: space-evenly;
-            grid-column: 1/4;
+            justify-content: center;
+            display: flex;
+            grid-row: 2/3; 
+            grid-column: 1/5;
             padding: 5px;
-            color: black;
+            gap: 10px;
         }
         #lists > a{
             text-decoration: none;
-            color: black;
+            color: white;
+            font-size: small
         }
         .alignFooter{
             display: flex;
@@ -510,14 +541,14 @@
             </div>
             <div>
                 <h2><b>Contacto</b></h2>
-                <form>
+                <form id="contactform">
                     <div id="contactimput">
                         <label>Texto Dato</label>
                         <input type="text" placeholder="Dato a completar">
                         <label>Texto Dato</label>
                         <input type="text" placeholder="Dato a completar">
                         <label>Mensaje</label>
-                        <input type="text" placeholder="Dato a completar">
+                        <input id="messageinput" type="text" placeholder="Dato a completar">
                     </div>
                     <button class="buttonstyle">Enviar</button>
                 </form>
@@ -527,19 +558,13 @@
             <div class="alignFooter" id ="logo2">
                 <img src="./Materiales/logo-blanco.png">
             </div>
-            <div class="alignFooter" id="lists">
-                <ul>
-                    <li>Nosotros</li>
-                    <li>Noticias</li>
-                    <li>Contacto</li>
-                    <li>Términos y condiciones</li>
-                </ul>
-            </div>
-            <div class="alignFooter">
-                <p>Seguinos!</p>
-                <div>LOGOS REDES</div>
-            </div>
-            <P>Copyright 2021 All rights reserved </P>
+            <nav class="alignFooter" id="lists">
+                <a href = "#"">Nosotros</a>
+                <a href = "#"">Noticias</a>
+                <a href = "#"">Contacto</a>
+                <a href="#""">Terminos y condiciones</a>
+            </nav>
+            <p>Copyright 2021 All rights reserved </P>
         </footer>
     </body>
 </html>
