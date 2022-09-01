@@ -182,11 +182,10 @@
         }
         .card{
             background-color: white;
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 10%;
+            margin-right: 10%;
             border-radius: 10px;
             margin-bottom: 10px;
-            padding: 5%;
             display: grid;
             grid-template-areas: 
             "imgcard"
@@ -196,13 +195,53 @@
         }
         .imgcard{
             grid-area: imgcard;
-            height: 50%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: 10px;
         }
-        #animalscard{
+        .imgtag{
+            border-radius: 10px;
+            background-color: #5227CC;
+            color:white;
+            width:100px;
+            padding:5px;
+            height: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            margin-left: 15px;
+        }
+        .datecard{
+            grid-area: datecard;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding:15px; 
+        }
+        .calendar{
+            grid-column: 1/3;
+            display: flex;
+            justify-content: flex-start;
+            gap:5px;
+        }
+        .time{
+            grid-column: 3/4;
+            display: flex;
+            justify-content: flex-end;
+            gap:5px;
+        }
+        .textcard{
+            grid-area: textcard;
+        }
+        .footercard{
+            grid-area: footercard;
+        }
+        #animals{
             background-image: url("./Materiales/cardanimales.jpg");
             background-size: cover;
             background-position: center;
         }
+
 
         
                   
@@ -294,31 +333,88 @@
                 <h2> Noticias </h2>
                 <p><u> ver todas </u></p>
             </div>
-            <div id="newscontent">
-                
-            <div class="card">
-                <div class="imgcard" id="animalscard">
-                    <p class="imgtag">ANIMALES</p>
+            <div id="newscontent">                
+                <div class="card">
+                    <div class="imgcard" id = "animals">       
+                        <p class="imgtag">ANIMALES</p>    
+                    </div>
+                    <div class="datecard">
+                        <div class="calendar">
+                            <img src="./Materiales/icono-calendario.png">
+                            <p>10/08/2021</p>
+                        </div>
+                        <div class="time">
+                            <img src="./Materiales/icono-reloj.png">
+                            <p> 4 min </p>
+                        </div>                 
+                    </div>
+                    <div class="textcard">
+                        <p><b>Fundappas abre nuevo centro</b></p>
+                        <p> El nuevo centro estará ubicado dentro
+                            del predio municipal Parque Rivera.
+                            La inauguración de centro contara
+                            con la presencia de la intendenta Carolina...</p>
+                    </div>
+                    <div class="footercard">
+                        <img src="./Materiales/icono-flecha.png">
+                        <p>ver más</p>
+                    </div>
                 </div>
-                <div class="datecard">
-                    <img src="./Materiales/icono-calendario.png">
-                    <p>10/08/2021</p>
-                    <img src="./Materiales/icono-reloj.png">
-                    <p> 4 min </p>
+
+                <div class="card">
+                        <div>
+                            <img src="">
+                            <p class="imgtag">URUGUAY</p>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="./Materiales/icono-calendario.png">
+                                <p>10/08/2021</p>
+                            </div>
+                            <div>
+                                <img src="./Materiales/icono-reloj.png">
+                                <p> 4 min </p>
+                            </div>         
+                        </div>
+                        <div>
+                            <p><b>DIRECT TV y TECHO inauguraron un
+                                espacio deportivo</b></p>
+                            <p> Los vecinos del lugar recibieron con
+                                alegría la concreción de este proyecto, 
+                                que busca promover la socialización y la
+                                actividad física...</p>
+                        </div>
+                        <div>
+                            <img src="./Materiales/icono-flecha.png">
+                            <p>ver más</p>
+                        </div>
                 </div>
-                <div class="textcard">
-                    <p><b>Fundappas abre nuevo centro</b></p>
-                    <p> El nuevo centro estará ubicado dentro
-                        del predio municipal Parque Rivera.
-                        La inauguración de centro contara
-                        con la presencia de la intendenta Carolina...</p>
+
+                <div class="card">
+                    <div>
+                        <img src="">
+                        <p class="imgtag">VOLUNTARIADO</p>
+                    </div>
+                    <div>
+                        <img src="./Materiales/icono-calendario.png">
+                        <p>10/08/2021</p>
+                        <img src="./Materiales/icono-reloj.png">
+                        <p> 3 min </p>
+                    </div>
+                    <div>
+                        <p><b>Jornada de voluntarios</b></p>
+                        <p> Se realizó una nueva jornada de voluntarios
+                            Remar. El encuentro tuvo parte en el departamento
+                            de Montevideo y contó..
+                        </p>
+                    </div>
+                    <div>
+                        <img src="./Materiales/icono-flecha.png">
+                        <p>ver más</p>
+                    </div>
                 </div>
-                <div class="footercard">
-                    <img src="./Materiales/icono-flecha.png">
-                    <p>ver más</p>
-                </div>
-            </div>
-            <div class="card">
+
+                <div class="card">
                     <div>
                         <img src="">
                         <p class="imgtag">URUGUAY</p>
@@ -327,68 +423,19 @@
                         <img src="./Materiales/icono-calendario.png">
                         <p>10/08/2021</p>
                         <img src="./Materiales/icono-reloj.png">
-                        <p> 4 min </p>
+                        <p> 5 min </p>
                     </div>
                     <div>
-                        <p><b>DIRECT TV y TECHO inauguraron un
-                            espacio deportivo</b></p>
-                        <p> Los vecinos del lugar recibieron con
-                            alegría la concreción de este proyecto, 
-                            que busca promover la socialización y la
-                            actividad física...</p>
+                        <p><b>Lanzamiento del plan Tu Techo</b></p>
+                        <p> Techo Uruguay informó su nuevo plan
+                            de acción para el segundo semestre del
+                            año.
+                        </p>
                     </div>
                     <div>
                         <img src="./Materiales/icono-flecha.png">
                         <p>ver más</p>
-                     </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="">
-                    <p class="imgtag">VOLUNTARIADO</p>
-                </div>
-                <div>
-                    <img src="./Materiales/icono-calendario.png">
-                    <p>10/08/2021</p>
-                    <img src="./Materiales/icono-reloj.png">
-                    <p> 3 min </p>
-                </div>
-                <div>
-                    <p><b>Jornada de voluntarios</b></p>
-                    <p> Se realizó una nueva jornada de voluntarios
-                        Remar. El encuentro tuvo parte en el departamento
-                        de Montevideo y contó..
-                    </p>
-                </div>
-                <div>
-                    <img src="./Materiales/icono-flecha.png">
-                    <p>ver más</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="">
-                    <p class="imgtag">URUGUAY</p>
-                </div>
-                <div>
-                    <img src="./Materiales/icono-calendario.png">
-                    <p>10/08/2021</p>
-                    <img src="./Materiales/icono-reloj.png">
-                    <p> 5 min </p>
-                </div>
-                <div>
-                    <p><b>Lanzamiento del plan Tu Techo</b></p>
-                    <p> Techo Uruguay informó su nuevo plan
-                        de acción para el segundo semestre del
-                        año.
-                    </p>
-                </div>
-                <div>
-                    <img src="./Materiales/icono-flecha.png">
-                    <p>ver más</p>
-                </div>
+                    </div>
             </div>
         </section>
         <section id ="contactUs">
