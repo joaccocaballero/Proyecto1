@@ -348,7 +348,7 @@
             margin-top: 10%;
             width: 90%;
             max-width: 600px;
-            height: 60%;
+            height: 70%;
             max-height: 90%;
             border-radius: 10px;
             background-color: white;
@@ -597,6 +597,49 @@
                 margin-bottom: 5px;
                 font-size: xx-small;
             }
+            .modalContainer{
+                width: 100%;
+                height: auto;
+                max-width: 1000px;
+                grid-template-columns: 45% 55%;
+                grid-template-rows: 1fr;
+            }
+            .modalImg{
+                height: auto;
+                border-radius: 10px 0px 0px 10px;
+            }
+            .modalInfo{
+                grid-template-columns: 1fr;
+                grid-template-rows: 10% 90%;
+            }
+            .modalOptions{
+                grid-template-areas: 
+                "modalEnterprise"
+                "modalOrganization";
+                margin-top: 5%;
+            }
+            .modalButton{
+                display: grid;
+                grid-template-columns: 20% 80%;
+                grid-template-rows: 1fr;
+                height: 120px;
+            }
+            .btnText{
+                padding: 10px;
+            }
+            #m1_Logo, #m2_Logo{
+                border-radius: 10px 0px 0px 10px;
+                height: 100%;
+            }
+            #m1_Logo > img{
+                max-height:25%;
+            }
+            #m2_Logo > img{
+                max-height:25%;
+            }
+
+            
+
         }
     </style>
 </head>
