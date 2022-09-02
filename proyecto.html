@@ -637,6 +637,64 @@
             #m2_Logo > img{
                 max-height:25%;
             }
+            #contactUs{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            #laptop{
+                grid-column: 1/2
+                display: flex
+                justify-content: center;
+            }
+            #contactSection{
+                grid-column: 2/3;
+            }
+            #contactSection > h2{
+                font-size: 45px;
+                text-align: center;
+            }
+            #contactForm{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            }
+            #laptop > img{
+                max-width: 70%;
+            }
+            #contactInput{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                column-gap: 20px;
+            }
+            #l1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            #in1{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            #l2{
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            #in2{
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+            #l3{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            #messageInput{
+                grid-column: 2/3;
+                grid-row: 2/5;
+            }
+
+
+
         }
     </style>
 </head>
@@ -838,15 +896,15 @@
            <div id="laptop" class="alignHeader">
                 <img src="./Materiales/laptop-escritorio.jpg">
             </div>
-            <div>
-                <h2><b>Contacto</b></h2>
+            <div id="contactSection">
+                <h2>Contacto</h2>
                 <form id="contactForm">
                     <div id="contactInput">
-                        <label>Texto Dato</label>
-                        <input type="text" placeholder="Dato a completar">
-                        <label>Texto Dato</label>
-                        <input type="text" placeholder="Dato a completar">
-                        <label>Mensaje</label>
+                        <label id="l1">Texto Dato</label>
+                        <input id="in1" type="text" placeholder="Dato a completar">
+                        <label id="l2">Texto Dato</label>
+                        <input id="in2" type="text" placeholder="Dato a completar">
+                        <label id="l3">Mensaje</label>
                         <input id="messageInput" type="text" placeholder="Dato a completar">
                     </div>
                     <button class="buttonstyle">Enviar</button>
