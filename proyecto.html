@@ -332,6 +332,134 @@
             justify-content: center;
             align-items: center;
         }
+        .modal{
+            position:fixed;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #111111bd;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .modalContainer{
+            margin-top: 10%;
+            width: 90%;
+            max-width: 600px;
+            height: 60%;
+            max-height: 90%;
+            border-radius: 10px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40% 60%;
+        }
+        .modalImg{
+            background: url("Materiales/imagen-modal.JPG");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+        .modalInfo{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 20% 80%;
+        }
+        .modalActions{
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+        .modalActions>div{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
+        .modalActions>p{
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: large;
+        }
+        .modalOptions{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            display: grid;
+            grid-template-areas:
+            "modalOrganization modalEnterprise";
+            margin-bottom: 5%;
+        }
+        .modalButton{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 0 5px rgb(221, 221, 221);
+            margin: 15px;
+            height: 195px;
+            border-radius: 10px;
+        }
+        .btnText{
+            padding: 5px;
+        }
+        .insideBtnTxt{
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #modalEnterprise{
+            grid-area: modalEnterprise;
+        }
+        #m1_Logo{
+            height: 60px;
+            width: 100%;
+            margin: 0px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: #17a2b8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #m1_Logo > img{
+            max-height:40%;
+        }
+        #m1_Title{
+            margin-top: 10px;
+            color:#17a2b8;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #modalOrganization{
+            grid-area: modalOrganization;   
+        }
+        #m2_Logo{
+            height: 60px;
+            width: 100%;
+            margin: 0px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: #5227CC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #m2_Logo > img{
+            margin-top: auto;
+            margin-bottom: auto;
+            max-height:40%;
+        }
+        #m2_Title{
+            margin-top: 10px;
+            color: #5227CC;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         @media (min-width: 845px){
             header{
                 padding: 5px;
@@ -684,6 +812,40 @@
                     <button class="buttonstyle">Enviar</button>
                 </form>
             </div>
+        </section>
+        <section class="modal">
+            <div class="modalContainer">
+                <div class="modalImg">
+                
+                </div>
+                <div class="modalInfo">
+                    <div class="modalActions">
+                        <div><b>X</b></div>
+                        <p>REGISTRAR</p>
+                    </div>
+                    <div class="modalOptions">
+                        <div id="modalEnterprise" class="modalButton">
+                            <div id="m1_Logo">
+                               <img src="./Materiales/icono-maletin.png">
+                            </div>
+                            <div class="btnText">
+                                <p id="m1_Title">MI EMPRESA</p>
+                                <p class = insideBtnTxt>Ingresar a sección empresas</p>
+                            </div>
+                        </div>
+                        <div id="modalOrganization" class="modalButton">
+                            <div id="m2_Logo">
+                                <img src="./Materiales/icono-persona.png">
+                            </div>
+                            <div class="btnText">
+                                <p id="m2_Title">MI ORGANIZACION</p>
+                                <p class = insideBtnTxt>Ingresar a sección organizaciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
         <footer>
             <div class="alignFooter" id="logo2">
