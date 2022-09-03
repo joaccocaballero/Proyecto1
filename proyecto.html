@@ -42,8 +42,8 @@
         }
         .buttonstyle{
             border-radius: 10px;
-            padding: 5px;
-            width: 80%;
+            padding: 2px;
+            width: 90%;
             background-color: #5227CC;
             font-family: 'DM Sans';
             color: white;
@@ -307,6 +307,12 @@
             margin-top: 20px;
             margin-left: 70%;
         }
+        #sendButton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
         footer{
             display: grid;
             gap: 15px;
@@ -494,6 +500,7 @@
             justify-content: center;
             align-items: center;
         }
+        
         @media (min-width: 845px){
             header{
                 padding: 5px;
@@ -716,7 +723,6 @@
             #sendButton > button{
                 width: 15%;
                 font-weight: bold;
-              
             }
             #l1{
                 grid-column: 1/2;
@@ -950,15 +956,15 @@
                 <h2>Contacto</h2>
                 <form id="contactForm">
                     <div id="contactInput">
-                        <label id="l1">Texto Dato</label>
-                        <textarea id="in1" type="text" placeholder="Dato a completar"></textarea>
-                        <label id="l2">Texto Dato</label>
+                        <label id="l1">Email</label>
+                        <textarea id="in1" type="Email" placeholder="Dato a completar"></textarea>
+                        <label id="l2">Teléfono</label>
                         <textarea id="in2" type="text" placeholder="Dato a completar"></textarea>
                         <label id="l3">Mensaje</label>
                         <textarea id="messageInput" type="text" placeholder="Dato a completar"></textarea>
                     </div>
                     <div id="sendButton">
-                        <button class="buttonstyle">Enviar</button>
+                        <button id="sendForm" class="buttonstyle">Enviar</button>
                     </div>
                 </form>
             </div>

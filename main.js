@@ -38,3 +38,22 @@ function onload(){
         openModal.style.backgroundColor="#5227cc"
     }
 }
+
+const botonEnviar = document.getElementById("sendForm")
+botonEnviar.addEventListener("click",validationForm)
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function validationForm(){
+    const email = document.getElementById("in1")
+    const telefono = document.getElementById("in2")
+    const mensaje = document.getElementById("messageInput")
+    let esValido = false;
+    esValido = validateEmail(email.textContent) && telefono.textContent!="" && mensaje.textContent != ""
+    if(!esValido){
+        alert("Ingrese todos los datos.")
+    }
+}
