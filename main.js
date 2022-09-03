@@ -52,7 +52,7 @@ function validationForm(){
     const telefono = document.getElementById("in2")
     const mensaje = document.getElementById("messageInput")
     let esValido = false;
-    esValido = validateEmail(email.textContent) && telefono.textContent!="" && mensaje.textContent != ""
+    esValido = validateEmail(email.value) && telefono.value!="" && mensaje.value != ""
     if(!esValido){
         alert("Ingrese todos los datos.")
     }
