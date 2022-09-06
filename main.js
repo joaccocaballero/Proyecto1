@@ -2,7 +2,6 @@ var openModal = document.getElementById("displayModal")
 const modal = document.querySelector(".modal")
 const closeModal = document.querySelector(".closeModal")
 
-
 openModal.addEventListener("click", (e) => {
     e.preventDefault()
     modal.classList.add("modal--show")
@@ -28,7 +27,8 @@ organizaciones.addEventListener("click", (e) => {
     localStorage.setItem ("login","organizaciones")
     openModal.style.backgroundColor="#5227cc"
 })
-function onload(){
+
+function pageLoad(){
     if(localStorage.getItem("login")=="empresa"){
         openModal.innerHTML="EMPRESAS"
         openModal.style.backgroundColor="#17a2b8"

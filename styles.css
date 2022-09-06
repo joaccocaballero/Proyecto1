@@ -1,0 +1,877 @@
+html,
+body{
+    height: 100%;
+    margin: 0px;
+    font-family: 'DM Sans'
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-bottom: 5px solid #5227cc;
+}
+
+#logo{
+    grid-column: 1/5;
+    border-top: 50px;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#logo>img{
+    height: 70%;
+}
+
+#menu{
+    justify-content: space-evenly;
+    grid-column: 1/4;
+    padding: 5px;
+}
+
+#menu>a{
+    text-decoration: none;
+    color: black;
+}
+
+#loginButton{
+    grid-column: 4/5;
+    margin-right: 4%;
+}
+
+.buttonstyle{
+    border-radius: 10px;
+    padding: 2px;
+    width: 90%;
+    background-color: #5227CC;
+    font-family: 'DM Sans';
+    color: white;
+    border: none;
+}
+
+.alignHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.166),
+            rgba(0, 0, 0, 0.411),
+            rgba(0, 0, 0, 0.606)),
+        url("./Materiales/manos.jpg");
+    text-align: center;
+}
+
+#mainText{
+    margin: 80px;
+}
+
+#office,
+#volunteer{
+    display: none;
+}
+
+.backgroundImage{
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px 1px gray;
+    padding: 5%;
+}
+
+#textOffice{
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.606),
+        rgba(0, 0, 0, 0.606),
+        rgba(0, 0, 0, 0.606)),
+    url("./Materiales/oficina.png");
+    text-align: left;
+}
+
+#textVolunteer{
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.606),
+        rgba(0, 0, 0, 0.606),
+        rgba(0, 0, 0, 0.606)),
+    url("./Materiales/voluntariado.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+#opportunitiesText{
+    text-align: center;
+}
+
+#opportunitiesText>p{
+    padding: 5px;
+    font-size: small;
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opBoxes{
+    border-radius: 10%;
+    width: 40%;
+    color: white;
+    display: grid;
+    grid-template-areas:
+        "img icn"
+        "texto texto";
+    margin: 15px;
+    max-width: 160px;
+    min-height: 145px;
+}
+
+.imgBoxes{
+    grid-area: img;
+    max-width: 50px;
+    max-height: 70px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.icnBoxes{
+    grid-area: icn;
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+    margin-left: 40%;
+    margin-top: 15px;
+}
+
+.txtBoxes{
+    grid-area: texto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    text-align: center;
+}
+
+#redOp{
+    background-color: #dc3545;
+}
+
+#yellowOp{
+    background-color: #FF9C07;
+}
+
+#greenOp{
+    background-color: #28a745;
+}
+
+#blueBox{
+    background-color: #17a2b8;
+}
+
+#news{
+    background-color: #5298ff;
+    padding: 10%;
+}
+
+#newsText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10%;
+}
+
+#newsText>h1,p{
+    margin: 0px;
+}
+
+.card{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35% 8% 49% 8%;
+}
+
+.imgCard{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+
+.imgTag{
+    border-radius: 10px;
+    background-color: #5227CC;
+    color: white;
+    width: 120px;
+    padding: 5px;
+    height: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.dateCard{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    margin-top: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+}
+
+.calendar{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.calendar>img{
+    max-height: 20px;
+}
+
+.time{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.time>img{
+    max-height: 20px;
+}
+
+.textCard{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 15px;
+    margin-bottom: 5%;
+}
+
+.footerCard{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 5px;
+    gap: 5px;
+    margin-top: 5%;
+}
+
+#footerCard>img{
+    max-height: 50px;
+}
+
+#footerCard>p{
+    max-height: 50px;
+}
+
+#animals{
+    background-image: url("./Materiales/cardanimales.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#uruguay{
+    background-image: url("./Materiales/casamadera.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#voluntariado{
+    background-image: url("./Materiales/volunteercard.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#uruguay2{
+    background-image: url("./Materiales/techoCard.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#laptop>img{
+    max-width: 70%;
+    margin-top: 20px;
+}
+
+#contactUs{
+    padding: 5%;
+    margin-bottom: 10px;
+}
+
+#contactInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contactInput>textarea{
+    font-family: 'DM Sans';
+    border-radius: 5px;
+}
+
+#messageInput{
+    height: 90px;
+}
+
+#messageInput::placeholder{
+    position: fixed;
+}
+
+#contactForm>button{
+    max-width: 30%;
+    margin-top: 20px;
+    margin-left: 70%;
+}
+
+#sendButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+footer{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    background: rgb(82, 39, 204);
+    background: linear-gradient(270deg, rgba(82, 39, 204, 1) 21%,
+                 rgba(82, 152, 255, 1) 100%);
+}
+footer>p{
+    grid-row: 3/4;
+    color: white;
+    grid-column: 1/5;
+    justify-content: center;
+    display: flex;
+    font-size: small;
+}
+
+#logo2{
+    grid-column: 1/5;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#logo2>img{
+    height: 100%;
+}
+
+#lists {
+    justify-content: center;
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 1/5;
+    padding: 5px;
+    gap: 10px;
+}
+
+#lists>a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+
+.alignFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.6s 0.9s;
+    pointer-events: none;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    transition: opacity 0.6s;
+    pointer-events: unset;
+    --transform: translateY(0vh);
+    --transition: transform 0.8s 0.8s;
+}
+
+.modalContainer{
+    margin-top: 10%;
+    width: 90%;
+    max-width: 600px;
+    height: 70%;
+    max-height: 90%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modalImg{
+    background: url("Materiales/imagen-modal.JPG");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.modalInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 80%;
+}
+
+.modalActions{
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
+.modalActions>a{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.modalActions>p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.modalOptions{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-areas:
+        "modalOrganization modalEnterprise";
+    margin-bottom: 5%;
+}
+
+.modalButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 0 5px rgb(221, 221, 221);
+    margin: 15px;
+    height: 195px;
+    border-radius: 10px;
+}
+
+.btnText{
+    padding: 5px;
+}
+
+.insideBtnTxt{
+    text-align: center;
+    font-size: small;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#modalEnterprise{
+    grid-area: modalEnterprise;
+}
+
+#m1_Logo{
+    height: 60px;
+    width: 100%;
+    margin: 0px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #17a2b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#m1_Logo>img{
+    max-height: 40%;
+}
+
+#m1_Title{
+    margin-top: 10px;
+    color: #17a2b8;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalOrganization{
+    grid-area: modalOrganization;
+}
+
+#m2_Logo{
+    height: 60px;
+    width: 100%;
+    margin: 0px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #5227CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#m2_Logo>img{
+    margin-top: auto;
+    margin-bottom: auto;
+    max-height: 40%;
+}
+
+#m2_Title{
+    margin-top: 10px;
+    color: #5227CC;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 845px){
+    header{
+        padding: 5px;
+    }
+
+    #logo{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        justify-content: center;
+    }
+
+    #logo>img{
+        height: 60%;
+    }
+
+    #menu{
+        grid-column: 2/4;
+        grid-row: 1/3;
+        align-items: center;
+    }
+
+    #loginButton{
+        grid-column: 4/5;
+        grid-row: 1/3;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+
+    .buttonstyle{
+        width: 35%;
+    }
+
+    main{
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mainText{
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 5%;
+        font-size: larger;
+    }
+
+    #solutions{
+        display: grid;
+        grid-template-areas:
+            "office textOffice"
+            "textVolunteer volunteer";
+        background-color: #5298ff;
+        padding: 3%;
+        justify-content: center;
+        height: 80vh;
+        gap:20px;
+        justify-content: center;
+    }
+
+    #office{
+        max-width: 1270px;
+        display: block;
+        background: url("./Materiales/oficina.png");
+        background-size: cover;
+        background-position: top;
+    }
+
+    #volunteer{
+        max-width: 1270px;
+        height: auto;
+        display: block;
+        background: url("./Materiales/voluntariado.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #textVolunteer,
+    #textOffice{
+        background: none;
+        text-align: left;
+        font-size: medium;
+    }
+
+    #boxes{
+        flex-direction: row;
+        margin-bottom: 5%;
+    }
+
+    #opportunitiesText{
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        font-size: large;
+    }
+
+    .opBoxes{
+        margin: 10px;
+        max-width: 160px;
+        min-height: 170px;
+        padding: 10px;
+    }
+
+    #news{
+        padding: 5px;
+        height: auto;
+    }
+
+    #newsText{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 5px;
+    }
+
+    #newsContent{
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .card{
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 20vw;
+    }
+
+    .footerCard{
+        max-height: 55px;
+    }
+
+    footer{
+        gap: 5px;
+    }
+
+    #logo2{
+        grid-column: 1/2;
+        grid-row: 1/5;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 30%;
+    }
+
+    #logo2>img{
+        height: 35%;
+    }
+
+    #lists{
+        margin-top: 10px;
+        grid-column: 2/3;
+        grid-row: 1/4;
+        flex-direction: column;
+        padding: 5px;
+        gap: 1px;
+    }
+
+    .alignFooter{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    footer>p{
+        grid-column: 1/5;
+        grid-row: 4/5;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: xx-small;
+    }
+
+    .modalContainer{
+        width: 100%;
+        height: auto;
+        max-width: 1000px;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 1fr;
+    }
+
+    .modalImg{
+        height: auto;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .modalInfo{
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 90%;
+    }
+
+    .modalOptions{
+        grid-template-areas:
+            "modalEnterprise"
+            "modalOrganization";
+        margin-top: 5%;
+    }
+
+    .modalButton{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr;
+        height: 120px;
+    }
+
+    .btnText{
+        padding: 10px;
+    }
+
+    #m1_Logo,
+    #m2_Logo{
+        border-radius: 10px 0px 0px 10px;
+        height: 100%;
+    }
+
+    #m1_Logo>img{
+        max-height: 25%;
+    }
+
+    #m2_Logo>img{
+        max-height: 25%;
+    }
+
+    #contactUs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #laptop{
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contactSection{
+        grid-column: 2/3;
+    }
+
+    #contactSection>h2{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    #contactForm{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #laptop>img{
+        max-width: 70%;
+    }
+
+    #contactInput{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
+        column-gap: 20px;
+    }
+
+    #sendButton{
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sendButton>button{
+        width: 15%;
+        font-weight: bold;
+    }
+
+    #l1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    #in1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: 100%;
+    }
+
+    #l2{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #in2{
+        grid-column: 1/2;
+        grid-row: 4/5;
+        height: 100%;
+    }
+
+    #l3{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #messageInput{
+        grid-column: 2/3;
+        grid-row: 2/5;
+        height: 100%;
+    }
+}
